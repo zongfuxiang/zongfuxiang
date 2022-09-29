@@ -1,0 +1,19 @@
+{
+	"AWSTemplateFormatVersion" : "2010-09-09",
+	"Description" : " Deploy a VPC ",
+	"Resources" : {		
+		"SecurityGroup": {
+			"Type": "AWS::EC2::SecurityGroup",
+			"Properties": {
+				"GroupDescription": "tteestt-sg",  
+				"VpcId": "vpc-056b6af2cf7ca622c",                  
+				"SecurityGroupIngress": [{
+					"IpProtocol" : "tcp",
+					"FromPort" : "80", 
+					"ToPort" : "80", 
+					"CidrIp" : "0.0.0.0/0"                  
+				}]
+			}
+		}
+	}
+}
